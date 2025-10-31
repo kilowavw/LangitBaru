@@ -7,7 +7,7 @@ import { ComicText } from './components/ComicText';
 const Header: React.FC = () => (
   <header className="fixed top-0 left-0 right-0 z-50 p-4 bg-black/50 backdrop-blur-sm">
     <div className="container mx-auto flex justify-between items-center">
-      <h1 className="text-3xl font-bangers text-red-500 tracking-wider">JAGOAN JALANAN</h1>
+      <h1 className="text-3xl font-bangers text-red-500 tracking-wider">Langit Baru</h1>
       <nav className="hidden md:flex gap-6 items-center">
         <a href="#hero" className="font-bold hover:text-yellow-400 transition-colors">BERANDA</a>
         <a href="#characters" className="font-bold hover:text-yellow-400 transition-colors">KARAKTER</a>
@@ -38,11 +38,11 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] to-transparent z-10"></div>
 
         <div className="relative z-20 text-center px-4">
-            <ComicText text="BERTARUNG!" className="text-5xl md:text-8xl mb-8" />
+            <ComicText text="Stop Bullying!" className="text-5xl md:text-8xl mb-8" />
             <h2 className="font-bangers text-7xl md:text-9xl lg:text-[150px] text-white tracking-wider" style={{ WebkitTextStroke: '4px black' }}>
-                KOTA INI MILIKMU
+                PEDULI SEKITARMU
             </h2>
-            <p className="max-w-xl mx-auto mt-4 text-lg">Lepaskan amarahmu di hutan beton di mana hanya yang terkuat yang bertahan. Era baru game beat 'em up telah tiba.</p>
+            <p className="max-w-xl mx-auto mt-4 text-lg">setiap aksi berarti, bertindaklah dengan tepat sebelum terlambat.</p>
         </div>
       </section>
     );
@@ -127,7 +127,7 @@ const HorizontalScrollSection: React.FC = () => {
                 >
                     <div className="flex-shrink-0 w-screen h-screen flex flex-col items-center justify-center text-center px-12">
                          <h2 className="text-8xl font-bangers text-white" style={{WebkitTextStroke: '2px #e53e3e'}}>FITUR GAME</h2>
-                         <p className="text-xl">Rasakan Pengalaman Bertarung yang Belum Pernah Ada</p>
+                         <p className="text-xl">Rasakan Pengalaman Bertarung yang Satisfiying</p>
                          <div className="mt-8 text-3xl font-bangers text-yellow-400 animate-pulse">Geser Kanan &rarr;</div>
                     </div>
                     {gameFeatures.map((feature, index) => (
@@ -188,14 +188,14 @@ const Footer: React.FC = () => {
             <div className="absolute inset-0 bg-neutral-900/50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <h2 className="text-7xl font-bangers text-yellow-400 mb-2" style={{ WebkitTextStroke: '2px black' }}>SIAP BERTARUNG?</h2>
-                <p className="mt-2 max-w-lg mx-auto text-neutral-300">Pertarungan belum berakhir. Ini baru permulaan. Ambil demonya dan buktikan kekuatanmu di jalanan.</p>
+                <p className="mt-2 max-w-lg mx-auto text-neutral-300">Pertarungan belum berakhir. Ini baru permulaan. Ambil demonya dan taklukkan takdirmu.</p>
                 <div className="mt-8">
                     <button className="bg-yellow-400 text-black font-bangers text-4xl px-12 py-4 rounded-md border-4 border-black transition-all transform hover:scale-110 hover:bg-red-600 hover:text-white active:scale-105 shadow-[8px_8px_0px_rgba(229,62,62,1)] hover:shadow-[10px_10px_0px_rgba(255,255,255,1)]">
                         UNDUH DEMO
                     </button>
                 </div>
                 <p className="text-neutral-600 mt-12 text-xs italic">Please lolosin tim kita bg pgn bantai bantai</p>
-                <p className="text-neutral-500 mt-2 text-sm">&copy; 2025 kata mamah gak boleh nakal 😤😤.</p>
+                <p className="text-neutral-500 mt-2 text-sm">&copy; 2025 Langit Baru Studios.</p>
             </div>
         </footer>
     );

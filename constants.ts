@@ -44,19 +44,22 @@ export const gameFeatures: Character[] = [
     {
         name: 'Cutscene Animasi',
         imageUrl: 'https://picsum.photos/seed/stage2/800/600',
+        videoUrl: 'https://res.cloudinary.com/dj0draukr/video/upload/v1761913586/Salinan_dari_Cpt_Pulang_ya_kak_enauk3.mp4',
         description: 'Cutscene animasi penuh, menyajikan cerita dengan cara yang lebih emosional daripada sekadar teks biasa.',
         style: 'CUTSCENE BUKAN CUMA TEKS'
     },
     {
-        name: 'Sistem Kombo yang Lancar',
+        name: 'Musuh Yang Berbeda',
         imageUrl: 'https://picsum.photos/seed/stage3/800/600',
-        description: 'Mudah dipelajari, sulit dikuasai. Rangkai serangan ringan, berat, dan spesial untuk menciptakan kombo khasmu sendiri.',
-        style: 'MEKANIK MENDALAM'
+        videoUrl: 'https://res.cloudinary.com/dj0draukr/video/upload/v1761925645/Recording_2025-10-31_224658_azo8dv.mp4',
+        description: 'Lawan musuh yang berbeda beda, tampilkan pertarungan yang imersive dan tidak monoton.',
+        style: 'KARAKTER BERAGAM'
     },
      {
-        name: 'Kerusuhan Co-op',
+        name: 'Tempat Yang Beragam',
         imageUrl: 'https://picsum.photos/seed/stage4/800/600',
-        description: 'Bekerja sama dengan teman secara online atau di sofa yang sama dan bersihkan jalanan bersama dalam mode co-op khusus.',
-        style: 'AKSI TIM TAG'
+        videoUrl: 'https://res.cloudinary.com/dj0draukr/video/upload/v1761927770/park_y0hrfo.mp4',
+        description: 'Jelajahi berbagai lingkungan yang berbeda berdasarkan cerita.',
+        style: 'EKSPLORASI'
     }
 ];

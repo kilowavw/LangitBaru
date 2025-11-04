@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { characters, gameFeatures } from './constants';
 import { CharacterCard } from './components/CharacterCard';
 import { ComicText } from './components/ComicText';
-import { AnnouncementModal } from './components/AnnouncementModal';
 
-const Header: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => (
+const Header: React.FC = () => (
   <header className="fixed top-0 left-0 right-0 z-50 p-4 bg-black/50 backdrop-blur-sm">
     <div className="container mx-auto flex justify-between items-center">
       <h1 className="text-3xl font-bangers text-red-500 tracking-wider">Langit Baru</h1>
@@ -13,12 +12,14 @@ const Header: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => (
         <a href="#hero" className="font-bold hover:text-yellow-400 transition-colors">BERANDA</a>
         <a href="#characters" className="font-bold hover:text-yellow-400 transition-colors">KARAKTER</a>
         <a href="#features" className="font-bold hover:text-yellow-400 transition-colors">FITUR</a>
-        <button
-          onClick={onOpenModal}
+        <a
+          href="https://drive.google.com/drive/folders/15x1BYmXuN1MDZj8H18qIqjfy6n_y6rad?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-red-600 text-white font-bangers text-xl px-6 py-1 rounded-sm border-2 border-black hover:bg-yellow-400 hover:text-black transition-all transform hover:scale-105"
         >
           MAINKAN SEKARANG
-        </button>
+        </a>
       </nav>
     </div>
   </header>
@@ -93,7 +94,7 @@ const ShuffleSection: React.FC = () => {
 const HorizontalScrollSection: React.FC = () => {
     const horizontalContainerRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
-    const [transform, setTransform] = useState(0);
+    const [transform, setTransform] = React.useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -186,7 +187,7 @@ const BreakoutSection: React.FC = () => {
     );
 }
 
-const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
+const Footer: React.FC = () => {
     return (
         <footer className="bg-black py-20 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-neutral-900/50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -194,11 +195,13 @@ const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
                 <h2 className="text-7xl font-bangers text-yellow-400 mb-2" style={{ WebkitTextStroke: '2px black' }}>SIAP BERTARUNG?</h2>
                 <p className="mt-2 max-w-lg mx-auto text-neutral-300">Pertarungan belum berakhir. Ini baru permulaan. Ambil demonya dan taklukkan takdirmu.</p>
                 <div className="mt-8">
-                    <button
+                    <a
                         href="https://drive.google.com/drive/folders/15x1BYmXuN1MDZj8H18qIqjfy6n_y6rad?usp=drive_link"
-                        className="bg-yellow-400 text-black font-bangers text-4xl px-12 py-4 rounded-md border-4 border-black transition-all transform hover:scale-110 hover:bg-red-600 hover:text-white active:scale-105 shadow-[8px_8px_0px_rgba(229,62,62,1)] hover:shadow-[10px_10px_0px_rgba(255,255,255,1)]">
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-yellow-400 text-black font-bangers text-4xl px-12 py-4 rounded-md border-4 border-black transition-all transform hover:scale-110 hover:bg-red-600 hover:text-white active:scale-105 shadow-[8px_8px_0px_rgba(229,62,62,1)] hover:shadow-[10px_10px_0px_rgba(255,255,255,1)]">
                         UNDUH DEMO
-                    </button>
+                    </a>
                 </div>
                 <p className="text-neutral-600 mt-12 text-xs italic">Please lolosin tim kita bg pgn bantai bantai</p>
                 <p className="text-neutral-500 mt-2 text-sm">&copy; 2025 Langit Baru Studios.</p>
@@ -208,22 +211,16 @@ const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
 }
 
 const App: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
-  
   return (
     <div className="bg-neutral-900">
-      <Header onOpenModal={handleOpenModal} />
+      <Header />
       <main>
         <HeroSection />
         <ShuffleSection />
         <HorizontalScrollSection />
         <BreakoutSection />
       </main>
-      <Footer onOpenModal={handleOpenModal} />
-      <AnnouncementModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Footer />
     </div>
   );
 };

@@ -195,7 +195,7 @@ const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
                 <p className="mt-2 max-w-lg mx-auto text-neutral-300">Pertarungan belum berakhir. Ini baru permulaan. Ambil demonya dan taklukkan takdirmu.</p>
                 <div className="mt-8">
                     <button
-                        onClick={onOpenModal}
+                        href="https://drive.google.com/drive/folders/15x1BYmXuN1MDZj8H18qIqjfy6n_y6rad?usp=drive_link"
                         className="bg-yellow-400 text-black font-bangers text-4xl px-12 py-4 rounded-md border-4 border-black transition-all transform hover:scale-110 hover:bg-red-600 hover:text-white active:scale-105 shadow-[8px_8px_0px_rgba(229,62,62,1)] hover:shadow-[10px_10px_0px_rgba(255,255,255,1)]">
                         UNDUH DEMO
                     </button>
